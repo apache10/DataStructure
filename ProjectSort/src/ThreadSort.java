@@ -4,7 +4,13 @@ import static java.lang.System.currentTimeMillis;
  * Created by gaurav on 20-09-2016.
  */
 public class ThreadSort extends Thread {
-        public void run(){
+    int[] array;
+
+    public ThreadSort(int[] array) {
+        this.array = array;
+    }
+
+    public void run(){
             long starti = currentTimeMillis();
             Sort.insertion(array);
             long endi = currentTimeMillis();

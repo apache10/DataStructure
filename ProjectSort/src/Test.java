@@ -9,12 +9,12 @@ import static java.lang.System.exit;
 public class Test {
     public static void main(String[] arg){
         Scanner input = new Scanner(System.in);
-        long size =indexSize();//taking the size of index from user
-        long[] array = new long[size];//how to convert long into int and why this error
+        int size =indexSize();//taking the size of index from user
+        int[] array = new int[size];
 
-        long[] array1=Calculator.bestCase(size);
-        long[] array2=Calculator.averageCase(size);
-        long[] array3=Calculator.worstCase(size);
+        int[] array1=Calculator.bestCase(size);
+        int[] array2=Calculator.averageCase(size);
+        int[] array3=Calculator.worstCase(size);
 
         System.out.println("enter 1 for best case ");
         System.out.println("enter 2 for average case ");
@@ -51,43 +51,43 @@ public class Test {
             if(!(i>9 && i==0)) {
                 switch (i) {
                     case 1:
-                        long start1 = currentTimeMillis();
+                        long start1 = System.currentTimeMillis();
                         Sort.insertion(array);
-                        long end1 = currentTimeMillis();
-                        System.out.println("Insertion Sort completed in" + (end1-start1) +" milisec");
+                        long end1 = System.currentTimeMillis();
+                        System.out.println("Insertion Sort completed in     " + (end1-start1) +" milisec");
                         break;
                     case 2:
-                        long start2 =currentTimeMillis();
+                        long start2 = System.currentTimeMillis();
                         Sort.selection(array);
-                        long end2 = currentTimeMillis();
-                        System.out.println("Selection Sort completed in" + (end2-start2) +" milisec");
+                        long end2 = System.currentTimeMillis();
+                        System.out.println("Selection Sort completed in     " + (end2-start2) +" milisec");
                         break;
                     case 3:
-                        long start3 = currentTimeMillis();
+                        long start3 = System.currentTimeMillis();
                         Sort.bubble(array);
-                        long end3 = currentTimeMillis();
-                        System.out.println("Bubble Sort completed in" + (end3-start3) +" milisec");
+                        long end3 = System.currentTimeMillis();
+                        System.out.println("Bubble Sort completed in    " + (end3-start3) +" milisec");
                         break;
                     case 4:
-                        long start4 = currentTimeMillis();
+                        long start4 = System.currentTimeMillis();
                         Sort.quick(array);
-                        long end4 = currentTimeMillis();
-                        System.out.println("Quick Sort completed in" + (end4-start4) +" milisec");
+                        long end4 = System.currentTimeMillis();
+                        System.out.println("Quick Sort completed in     " + (end4-start4) +" milisec");
                         break;
                     case 5:
-                        long start5 = currentTimeMillis();
+                        long start5 = System.currentTimeMillis();
                         Sort.merge(array);
-                        long end5 = currentTimeMillis();
-                        System.out.println("Merge Sort completed in" + (end5-start5) +"milisec");
+                        long end5 = System.currentTimeMillis();
+                        System.out.println("Merge Sort completed in     " + (end5-start5) +"milisec");
                         break;
                     case 6:
-                        long start6 = currentTimeMillis();
+                        long start6 = System.currentTimeMillis();
                         Sort.heap(array);
-                        long end6 = currentTimeMillis();
-                        System.out.println("Heap Sort completed in" + (end6-start6) +"milisec");
+                        long end6 = System.currentTimeMillis();
+                        System.out.println("Heap Sort completed in      " + (end6-start6) +"milisec");
                         break;
                     case 7:
-                        ThreadSort t1 = new ThreadSort();
+                        ThreadSort t1 = new ThreadSort(array);
                         t1.start();
                         break;
                     case 8:
@@ -106,10 +106,10 @@ public class Test {
                 System.out.println("please enter the valid number");
         }
     }
-    public static long indexSize(){
+    public static int indexSize(){
         Scanner input = new Scanner(System.in);
         System.out.println("Enter the size of array :");
-        long size = input.nextLong();
+        int size = input.nextInt();
         return size;
     }
 }

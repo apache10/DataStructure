@@ -2,38 +2,33 @@
  * Created by gaurav on 20-09-2016.
  */
 public class Calculator {
-    public static long[] averageCase(long[] size)
+    public static int[] averageCase(int size)
     {
 
-        long[] num=new long[size];// ??
-        for(long i=1; i<=num.length; i++)
+        int[] num=new int[size];// ??
+        for(int i=0; i<num.length; i++)
         {
-            num[i]=(long)(Math.random()*1000);
+            num[i]=(int)(Math.random()*1000);
 
         }
         return num;
 
     }
-    public static long[] bestCase(long[] size)
-    {
-
-        long[] num=new long[size];// ??
-        for(long i=1; i<=num.length; i++)
+    public static int[] bestCase(int size) {
+        int[] num=new int[size];// ??
+        for(int i=0; i<num.length; i++)
         {
-            num[i]=i;
-
+            num[i]=i+1;
         }
         return num;
 
     }
-    public static long[] worstCase(long[] size)
+    public static int[] worstCase(int size)
     {
 
-        long[] num=new long[size];// ??
-        for(long i=num.length; i>0; i--)
-        {
-            num[i]=(long)(Math.random()*1000);
-
+        int[] num = new int[size];
+        for(int i = num.length-1; i >= 0; i--){
+            num[i] = i+1;
         }
         return num;
 
