@@ -1,8 +1,9 @@
+package com.gaurav.sortingAlgorithm;
 /**
  * Created by gaurav on 20-09-2016.
  */
 public class Sort {
-    public static int[] insertion(int[] array){
+    public static void insertion(int[] array){
         int temp;
         for (int i = 1; i < array.length; i++) {
             for(int j = i ; j > 0 ; j--){
@@ -13,7 +14,6 @@ public class Sort {
                 }
             }
         }
-        return array;
     }
     public static int[] selection(int[] array){
         for (int i = 0; i < array.length - 1; i++){
