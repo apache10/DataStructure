@@ -14,7 +14,6 @@ class TestStack {
         boolean check =isFull();
         if(check != true){
             A[++top]=x;
-
         }
     }
 
@@ -24,10 +23,11 @@ class TestStack {
         if(check != true){
             top -= 1;
             return A[top+1];
-
         }
         return -1;
     }
+
+
     public  boolean isEmpty(){
         if(top == -1){
             System.out.println("stack is empty ");
@@ -63,7 +63,6 @@ class stack {
         Scanner scanner = new Scanner(System.in);
         int size = scanner.nextInt();
         TestStack s = new TestStack(size);
-
 
         while (true){
             System.out.println("1----> To push into stack");
@@ -112,6 +111,5 @@ class stack {
 
             }
         }
-
     }
 }
